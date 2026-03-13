@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary-gold: var(--primary-gold);
+  --color-hover-gold: var(--hover-gold);
+  --color-bg-beige: var(--bg-beige);
+  --color-bg-beige-soft: var(--bg-beige-soft);
+  --color-text-main: var(--text-main);
+  --color-text-light: var(--text-light);
+  --color-accent-silver: var(--accent-silver);
+  --color-accent-silver-light: var(--accent-silver-light);
+  --color-pure-white: var(--pure-white);
+}
+
+:root {
+  --primary-gold: #C5A059;
+  --hover-gold: #A67C00;
+  --bg-beige: #FDFBF7;
+  --bg-beige-soft: #F5F2EB;
+  --text-main: #332E2C;
+  --text-light: #5C5552;
+  --accent-silver: #A9A9A9;
+  --accent-silver-light: #E8E8E8;
+  --pure-white: #ffffff;
+  --shadow-color: rgba(197, 160, 89, 0.15);
+  --background: var(--bg-beige);
+  --foreground: var(--text-main);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--foreground);
+  line-height: 1.6;
+  background-color: var(--background);
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+  visibility: visible;
+  overflow-x: hidden;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+body.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s ease-in-out, visibility 0s 0.7s;
+}
