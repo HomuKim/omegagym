@@ -33,7 +33,7 @@ export default function FacilitiesPage() {
       const imageCount = 20;
 
       for (let i = 1; i <= imageCount; i++) {
-        const src = `/images/facility/${activeConfig.folder}/${activeConfig.prefix}${i}.${activeConfig.ext}`;
+        const src = `/omegagym/images/facility/${activeConfig.folder}/${activeConfig.prefix}${i}.${activeConfig.ext}`;
         const img = new window.Image();
         img.src = src;
         img.onload = () => {
@@ -62,7 +62,7 @@ export default function FacilitiesPage() {
         transition={{ duration: 1 }}
         className="relative flex flex-col items-center justify-center bg-text-main/90 text-bg-beige text-center py-1 px-5 my-[30px] mx-auto w-[95%] max-w-[1160px] h-[280px] max-sm:h-[180px] max-sm:p-2.5 rounded-[20px] overflow-hidden leading-[1.6] border border-primary-gold/20 shadow-[0_4px_20px_rgba(197,160,89,0.1)]"
       >
-        <div className="absolute inset-0 bg-[url('/images/logo.png')] bg-[length:400px] max-sm:bg-[length:220px] bg-center bg-no-repeat opacity-60 z-[-1]" />
+        <div className="absolute inset-0 bg-[url('/omegagym/images/logo.png')] bg-[length:400px] max-sm:bg-[length:220px] bg-center bg-no-repeat opacity-60 z-[-1]" />
         <h1 className="text-5xl max-sm:text-[33px] mb-5 font-bold drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] text-primary-gold">건강한 삶을 위한 완벽한 환경</h1>
         <p className="text-xl max-sm:text-[16px] max-w-[600px] mx-auto mb-[30px] drop-shadow-[1px_1px_2px_rgba(0,0,0,0.5)] text-accent-silver-light">최고의 운동 환경과 다양한 시설을 갖춘<br/>오메가짐에 오신 것을 환영합니다.</p>
       </motion.section>

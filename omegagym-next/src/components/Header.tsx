@@ -42,7 +42,7 @@ export default function Header() {
           <Link href="https://www.instagram.com/omega__gym1" target="_blank">
             <div className="relative h-[60px] w-[120px] max-sm:h-[36px] max-sm:w-[72px]">
               <Image
-                src="/images/logo.png"
+                src="/omegagym/images/logo.png"
                 alt="OMEGAGYM Logo"
                 fill
                 className="object-contain"

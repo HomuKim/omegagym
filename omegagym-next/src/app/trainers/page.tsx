@@ -17,19 +17,19 @@ type Trainer = {
 };
 
 const admins: Trainer[] = [
-  { id: "admin1", name: "C E O", role: "C E O", thumbnail: "/images/member/Hyesung/ceo.jpg", noModal: true },
-  { id: "admin2", name: "GENERAL\nMANAGER", role: "GENERAL MANAGER", thumbnail: "/images/member/Woosung/thumbnail.png", folder: "Woosung", instagram: "https://www.instagram.com/define_thebody_general_manager" },
-  { id: "admin3", name: "PT TEAM\nLEADER", role: "PT TEAM LEADER", thumbnail: "/images/member/Dongsoo/thumbnail.png", folder: "Dongsoo", instagram: "https://www.instagram.com/define_thebody_han" }
+  { id: "admin1", name: "C E O", role: "C E O", thumbnail: "/omegagym/images/member/Hyesung/ceo.jpg", noModal: true },
+  { id: "admin2", name: "GENERAL\nMANAGER", role: "GENERAL MANAGER", thumbnail: "/omegagym/images/member/Woosung/thumbnail.png", folder: "Woosung", instagram: "https://www.instagram.com/define_thebody_general_manager" },
+  { id: "admin3", name: "PT TEAM\nLEADER", role: "PT TEAM LEADER", thumbnail: "/omegagym/images/member/Dongsoo/thumbnail.png", folder: "Dongsoo", instagram: "https://www.instagram.com/define_thebody_han" }
 ];
 
 const trainers: Trainer[] = [
-  { id: "tr1", name: "주 영 현", role: "트레이너", thumbnail: "/images/member/Younghyun/thumbnail.png", folder: "Younghyun", instagram: "https://www.instagram.com/define_thebody_joo" },
-  { id: "tr2", name: "권 현 우", role: "트레이너", thumbnail: "/images/member/Hyunwoo/thumbnail.png", folder: "Hyunwoo", instagram: "https://www.instagram.com/define_thebody_kwon" },
-  { id: "tr3", name: "왕 종 민", role: "트레이너", thumbnail: "/images/member/Jongmin/thumbnail.png", folder: "Jongmin", instagram: "https://www.instagram.com/define_thebody_wang" },
-  { id: "tr4", name: "원 은 빈", role: "트레이너", thumbnail: "/images/member/Eunbin/thumbnail.png", folder: "Eunbin", instagram: "https://www.instagram.com/eu____b" },
-  { id: "tr5", name: "박 민 서", role: "트레이너", thumbnail: "/images/member/Minseo/thumnail.png", folder: "Minseo", instagram: "https://www.instagram.com/define_thebody_min" },
-  { id: "tr6", name: "이 주 은", role: "트레이너", thumbnail: "/images/member/Jueun/thumnail.png", folder: "Jueun", instagram: "https://www.instagram.com/define_thebody_min" },
-  { id: "tr7", name: "손 지 호", role: "트레이너", thumbnail: "/images/member/Jiho/thumbnail.png", folder: "Jiho", instagram: "https://www.instagram.com/define_thebody_min" }
+  { id: "tr1", name: "주 영 현", role: "트레이너", thumbnail: "/omegagym/images/member/Younghyun/thumbnail.png", folder: "Younghyun", instagram: "https://www.instagram.com/define_thebody_joo" },
+  { id: "tr2", name: "권 현 우", role: "트레이너", thumbnail: "/omegagym/images/member/Hyunwoo/thumbnail.png", folder: "Hyunwoo", instagram: "https://www.instagram.com/define_thebody_kwon" },
+  { id: "tr3", name: "왕 종 민", role: "트레이너", thumbnail: "/omegagym/images/member/Jongmin/thumbnail.png", folder: "Jongmin", instagram: "https://www.instagram.com/define_thebody_wang" },
+  { id: "tr4", name: "원 은 빈", role: "트레이너", thumbnail: "/omegagym/images/member/Eunbin/thumbnail.png", folder: "Eunbin", instagram: "https://www.instagram.com/eu____b" },
+  { id: "tr5", name: "박 민 서", role: "트레이너", thumbnail: "/omegagym/images/member/Minseo/thumnail.png", folder: "Minseo", instagram: "https://www.instagram.com/define_thebody_min" },
+  { id: "tr6", name: "이 주 은", role: "트레이너", thumbnail: "/omegagym/images/member/Jueun/thumnail.png", folder: "Jueun", instagram: "https://www.instagram.com/define_thebody_min" },
+  { id: "tr7", name: "손 지 호", role: "트레이너", thumbnail: "/omegagym/images/member/Jiho/thumbnail.png", folder: "Jiho", instagram: "https://www.instagram.com/define_thebody_min" }
 ];
 
 export default function TrainersPage() {
@@ -46,7 +46,7 @@ export default function TrainersPage() {
       document.body.classList.add("overflow-hidden");
       
       // Load max 10 profiles
-      const possibleProfiles = Array.from({length: 10}, (_, i) => `/images/member/${selectedTrainer.folder}/profile${i+1}.jpg`);
+      const possibleProfiles = Array.from({length: 10}, (_, i) => `/omegagym/images/member/${selectedTrainer.folder}/profile${i+1}.jpg`);
       // Fallback for first image mostly being `profile1.jpg`
       setMainProfileImage(possibleProfiles[0]);
       
@@ -61,7 +61,7 @@ export default function TrainersPage() {
       });
 
       // Load max 30 reviews
-      const possibleReviews = Array.from({length: 30}, (_, i) => `/images/member/${selectedTrainer.folder}/review${i+1}.jpg`);
+      const possibleReviews = Array.from({length: 30}, (_, i) => `/omegagym/images/member/${selectedTrainer.folder}/review${i+1}.jpg`);
       const loadedReviews: string[] = [];
       possibleReviews.forEach(src => {
         const img = new window.Image();
@@ -124,7 +124,7 @@ export default function TrainersPage() {
         transition={{ duration: 1 }}
         className="relative flex flex-col items-center justify-center bg-text-main/90 text-bg-beige text-center py-1 px-5 my-[30px] mx-auto w-[95%] max-w-[1160px] h-[280px] max-sm:h-[180px] max-sm:p-2.5 rounded-[20px] overflow-hidden border border-primary-gold/20 shadow-[0_4px_20px_rgba(197,160,89,0.1)]"
       >
-        <div className="absolute inset-0 bg-[url('/images/logo.png')] bg-[length:400px] max-sm:bg-[length:220px] bg-center bg-no-repeat opacity-60 z-[-1]" />
+        <div className="absolute inset-0 bg-[url('/omegagym/images/logo.png')] bg-[length:400px] max-sm:bg-[length:220px] bg-center bg-no-repeat opacity-60 z-[-1]" />
         <h1 className="text-5xl max-sm:text-[35px] mb-5 font-bold drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] text-primary-gold">
           함께하는 피트니스 여정
         </h1>
@@ -235,7 +235,7 @@ export default function TrainersPage() {
                 {activeTab === "project" && (
                   <motion.div initial={{opacity:0}} animate={{opacity:1}} className="min-h-full flex items-center justify-center py-10">
                     <img 
-                      src={`/images/member/${selectedTrainer.folder}/career.jpg`} 
+                      src={`/omegagym/images/member/${selectedTrainer.folder}/career.jpg`} 
                       alt="Career" 
                       className="w-[80%] max-sm:w-full h-auto rounded-[15px] shadow-sm"
                       onError={(e) => (e.currentTarget.style.display = 'none')}
